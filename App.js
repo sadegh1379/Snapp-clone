@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { store } from './store'
+import { Provider, useSelector } from 'react-redux'
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>sadegh</Text>
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <Text>sadegh</Text>
+      </View>
+    </Provider>
+
   );
 }
 
