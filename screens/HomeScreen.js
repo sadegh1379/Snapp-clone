@@ -6,7 +6,7 @@ import NavOptions from '../components/NavOptions';
 const HomeScreen = () => {
   return (
     <SafeAreaView style={[tw`h-full`]}>
-      <View style={tw`p-5`}>
+      <View style={tw`p-3`}>
           <Image
             style={{ width: 100, height: 100, resizeMode: 'contain', }}
             source={require('../assets/snapp-logo.png')}

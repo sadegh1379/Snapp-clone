@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import tw from 'twrnc'
+import { Icon } from '@rneui/themed';
 
 const data = [
      {
@@ -22,13 +23,17 @@ const NavOptions = () => {
        data={data}
        horizontal
        renderItem={({ item }) => (
-          <TouchableOpacity style={tw`bg-gray-200 p-5 m-2 w-40`}>
+          <TouchableOpacity style={tw`bg-gray-200 p-5 m-1 w-40`}>
                <View style={tw`text-center flex items-center rounded`}>
                     <Image 
                        style={{ width: 100, height: 100, resizeMode: 'contain' }}
                        source={item.image }
                     />
                     <Text style={tw`font-bold text-lg mt-1`}>{item.title}</Text>
+                    <Icon 
+                    style={tw`p-3 bg-black rounded-full mt-3`}
+                    size={20}
+                    name="arrowright" color="white" type="antdesign"/>
                </View>
           </TouchableOpacity>
        )}
